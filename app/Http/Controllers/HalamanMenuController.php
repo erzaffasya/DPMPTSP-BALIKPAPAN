@@ -72,6 +72,7 @@ class HalamanMenuController extends Controller
             'file' => $txt1,
             'link' => $request->link,
             'menu_id' => $request->menu_id,
+            'slug' => strtolower(str_replace(' ', '-', $request->judul))
         ]);
 
 
@@ -141,6 +142,7 @@ class HalamanMenuController extends Controller
             $HalamanMenu->file = $txt1;
             $HalamanMenu->link = $request->link;
             $HalamanMenu->menu_id = $request->menu_id;
+            $HalamanMenu->slug = strtolower(str_replace(' ', '-', $request->judul));
             $HalamanMenu->save();
         } else {
             if (isset($request->gambar)) {

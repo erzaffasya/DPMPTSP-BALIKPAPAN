@@ -69,6 +69,7 @@ class PengumumanController extends Controller
             'file' => $txt1,
             'link' => $request->link,
             'users_id' => Auth::user()->id,
+            'slug' => strtolower(str_replace(' ', '-', $request->judul))
         ]);
         
 
@@ -136,6 +137,7 @@ class PengumumanController extends Controller
         $Pengumuman->file = $txt1;
         $Pengumuman->link = $request->link;
         $Pengumuman->users_id = Auth::user()->id;
+        $Pengumuman->SLUG = strtolower(str_replace(' ', '-', $request->judul));
         $Pengumuman->save();
 
         return redirect()->route('Pengumuman.index')

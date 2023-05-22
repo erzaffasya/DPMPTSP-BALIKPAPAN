@@ -76,6 +76,7 @@ class BeritaController extends Controller
             'file' => $txt1,
             'link' => $request->link,
             'users_id' => Auth::user()->id,
+            'slug' => strtolower(str_replace(' ', '-', $request->judul))
             // 'kategori_berita_id' => $request->kategori_berita_id,
         ]);
 
@@ -156,6 +157,7 @@ class BeritaController extends Controller
         $Berita->link = $request->link;
         $Berita->users_id = Auth::user()->id;
         // $Berita->kategori_berita_id = $request->kategori_berita_id;
+        $Berita->slug = strtolower(str_replace(' ', '-', $request->judul));
         $Berita->save();
 
         return redirect()->route('Berita.index')

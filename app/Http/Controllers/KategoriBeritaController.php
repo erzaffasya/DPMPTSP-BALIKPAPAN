@@ -45,6 +45,7 @@ class KategoriBeritaController extends Controller
         KategoriBerita::create([
             'nama_kategori' => $request->nama_kategori,
             'deskripsi' => $request->deskripsi,
+            'slug' => strtolower(str_replace(' ', '-', $request->judul))
         ]);
 
         return redirect()->route('KategoriBerita.index')
@@ -86,6 +87,7 @@ class KategoriBeritaController extends Controller
         $KategoriBerita = KategoriBerita::find($id);
         $KategoriBerita->nama_kategori = $request->nama_kategori;
         $KategoriBerita->deskripsi = $request->deskripsi;
+        $KategoriBerita->slug = strtolower(str_replace(' ', '-', $request->judul));
         $KategoriBerita->save();
 
         return redirect()->route('KategoriBerita.index')

@@ -58,6 +58,7 @@ class PelayananController extends Controller
             'judul' => $request->judul,
             'gambar' => $txt,
             'deskripsi' => $request->deskripsi,
+            'slug' => strtolower(str_replace(' ', '-', $request->judul))
         ]);
 
 
@@ -112,6 +113,7 @@ class PelayananController extends Controller
         $Pelayanan->judul = $request->judul;
         $Pelayanan->gambar = $txt;
         $Pelayanan->deskripsi = $request->deskripsi;
+        $Pelayanan->slug = strtolower(str_replace(' ', '-', $request->judul));
         $Pelayanan->save();
 
         return redirect()->route('Pelayanan.index')
