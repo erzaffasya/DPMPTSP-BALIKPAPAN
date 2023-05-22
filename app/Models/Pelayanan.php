@@ -10,7 +10,7 @@ class Pelayanan extends Model
     use HasFactory;
     protected $table = 'pelayanan';
     protected $fillable = [
-        'judul', 'gambar', 'deskripsi'
+        'judul', 'gambar', 'deskripsi','slug'
     ];
 
     protected $primaryKey = 'id';

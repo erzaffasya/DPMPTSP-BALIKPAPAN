@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string("file")->nullable();
             $table->text("link")->nullable();
             $table->string("gambar")->nullable();
+            $table->string("slug")->nullable();
             $table->foreignId("menu_id")->nullable()->constrained("menu")->onDelete("cascade")->onUpdate("cascade");
             $table->timestamps();
         });

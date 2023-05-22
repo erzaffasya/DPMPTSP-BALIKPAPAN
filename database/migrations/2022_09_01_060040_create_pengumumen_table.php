@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string("gambar")->nullable();
             $table->string("file")->nullable();
             $table->string("link")->nullable();
+            $table->string("slug")->nullable();
             $table->foreignId("users_id")->nullable()->constrained("users")->onDelete("cascade")->onUpdate("cascade");
             $table->timestamps();
         });

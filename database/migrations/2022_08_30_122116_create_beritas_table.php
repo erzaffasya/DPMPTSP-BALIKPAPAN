@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string("gambar")->nullable();
             $table->string("file")->nullable();
             $table->string("link")->nullable();
+            $table->string("slug")->nullable();
             $table->foreignId("users_id")->nullable()->constrained("users")->onDelete("cascade")->onUpdate("cascade");
             $table->foreignId("kategori_berita_id")->nullable()->constrained("kategori_berita")->onDelete("cascade")->onUpdate("cascade");
             $table->timestamps();
