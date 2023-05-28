@@ -39,7 +39,7 @@
                                     </ul>
                                 </div>
                                 <div class="entry-details">
-                                    <h3><a href="{{ route('detail-berita', $item->id) }}">{{  \Illuminate\Support\Str::limit($item->judul, $limit = 90, $end = '...') }}</a></h3>
+                                    <h3><a href="{{ route('detail-berita', $item->slug) }}">{{  \Illuminate\Support\Str::limit($item->judul, $limit = 90, $end = '...') }}</a></h3>
                                     {!! \Illuminate\Support\Str::limit($item->isi, $limit = 200, $end = '...') !!}
                                     <br>
                                     <br><a href="#" class="read-more">READ MORE</a>
@@ -91,7 +91,7 @@
                                         </div>
                                         <div class="details">
                                             <span class="date">{{$item->created_at->Format('D, d M Y')}} </span>
-                                            <h4 class="fs-6"><a href="{{route('detail-berita',$item->id)}}">{{$item->judul}}</a></h4>
+                                            <h4 class="fs-6"><a href="{{route('detail-berita',$item->slug)}}">{{$item->judul}}</a></h4>
                                         </div>
                                     </div>
                                 @endforeach

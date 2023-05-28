@@ -32,7 +32,7 @@
                                                 @if ($loop->index + 1 == 2) height="275" @endif alt
                                                 class="img img-responsive">
                                             <div class="wpo-blog-content">
-                                                <h2><a href="{{ route('detail-berita', $item->id) }}">{{ \Illuminate\Support\Str::limit($item->judul, $limit = 55, $end = '...') }}
+                                                <h2><a href="{{ route('detail-berita', $item->slug) }}">{{ \Illuminate\Support\Str::limit($item->judul, $limit = 55, $end = '...') }}
                                                     </a></h2>
                                                 <p>{!! \Illuminate\Support\Str::limit($item->isi, $limit = 125, $end = '...') !!} </p>
                                                 <ul>
@@ -54,7 +54,7 @@
                                     <div class="img-holder">
                                         <img src="{{ asset($item->gambar) }}" alt class="img img-responsive">
                                         <div class="wpo-blog-content">
-                                            <h2><a href="{{ route('detail-berita', $item->id) }}">{{ \Illuminate\Support\Str::limit($item->judul, $limit = 25, $end = '...') }}
+                                            <h2><a href="{{ route('detail-berita', $item->slug) }}">{{ \Illuminate\Support\Str::limit($item->judul, $limit = 25, $end = '...') }}
                                                 </a></h2>
                                             <ul>
                                                 <li>By <a href="blog-single.html">{{ $item->User->name }}</a>
@@ -144,7 +144,7 @@
                                                 <div class="wpo-blog-content">
                                                     <h2>
                                                         <a
-                                                            href="{{ route('detail-berita', $Beritas->id) }}">{{ \Illuminate\Support\Str::limit($Beritas->judul, $limit = 60, $end = '...') }}</a>
+                                                            href="{{ route('detail-berita', $Beritas->slug) }}">{{ \Illuminate\Support\Str::limit($Beritas->judul, $limit = 60, $end = '...') }}</a>
                                                     </h2>
                                                     <ul>
                                                         <li><img src="tlandingpage/assets/images/blog/blog-avater/img-1.jpg "
@@ -226,7 +226,7 @@
                                         <div class="details">
                                             <span class="date">{{ $item->created_at->Format('D, d M Y') }} </span>
                                             <h4 class="fs-6"><a
-                                                    href="{{ route('detail-berita', $item->id) }}">{{ $item->judul }}</a>
+                                                    href="{{ route('detail-berita', $item->slug) }}">{{ $item->judul }}</a>
                                             </h4>
                                         </div>
                                     </div>

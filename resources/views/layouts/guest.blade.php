@@ -18,7 +18,7 @@
                                     <li style="width: 80%;">
                                         <marquee>
                                             @foreach ($Pengumuman as $item)
-                                                <a href="{{ route('detail-pengumuman',$item->id) }}"> {{ $item->judul }} | </a> 
+                                                <a href="{{ route('detail-pengumuman',$item->slug) }}"> {{ $item->judul }} | </a> 
                                                 {{-- {{ $item->judul }} | --}}
                                             @endforeach
                                         </marquee>

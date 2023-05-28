@@ -57,8 +57,8 @@ Route::get('/login2', function () {
 Route::get('detail/{id}', [LandingpageController::class, 'HalamanMenu'])->name('HalamanMenu');
 Route::get('sub-menu/{id}', [MenuController::class, 'subMenu'])->name('sub-menu');
 Route::get('berita', [LandingpageController::class, 'Berita'])->name('landingpage-berita');
-Route::get('detail-berita/{id}', [LandingpageController::class, 'DetailBerita'])->name('detail-berita');
-Route::get('detail-pengumuman/{id}', [LandingpageController::class, 'detailPengumuman'])->name('detail-pengumuman');
+Route::get('detail-berita/{slug}', [LandingpageController::class, 'DetailBerita'])->name('detail-berita');
+Route::get('detail-pengumuman/{slug}', [LandingpageController::class, 'detailPengumuman'])->name('detail-pengumuman');
 Route::post('cari-berita', [LandingpageController::class, 'cariBerita'])->name('cari-berita');
 Route::get('/', [LandingpageController::class, 'home'])->name('home');
 

@@ -30,7 +30,7 @@
                                         <div class="details">
                                             <span class="date">{{ $item->created_at->Format('D, d M Y') }} </span>
                                             <h4 class="fs-6"><a
-                                                    href="{{ route('detail-berita', $item->id) }}">{{ $item->judul }}</a>
+                                                    href="{{ route('detail-berita', $item->slug) }}">{{ $item->judul }}</a>
                                             </h4>
                                         </div>
                                     </div>
@@ -49,7 +49,7 @@
                                             <span class="date">{{ $item->created_at->Format('D, d M Y') }}
                                             </span>
                                             <h4 class="fs-6"><a
-                                                    href="{{ route('detail-berita', $item->id) }}">{{ $item->judul }}</a>
+                                                    href="{{ route('detail-berita', $item->slug) }}">{{ $item->judul }}</a>
                                             </h4>
                                         </div>
                                     </div>

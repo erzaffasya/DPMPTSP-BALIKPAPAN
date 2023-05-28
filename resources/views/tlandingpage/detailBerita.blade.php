@@ -60,7 +60,7 @@
                         <div class="more-posts">
                             @if ($previous != null)
                                 <div class="previous-post">
-                                    <a href="{{ route('detail-berita', $previous->id) }}">
+                                    <a href="{{ route('detail-berita', $previous->slug) }}">
                                         <span class="post-control-link">Berita Sebelumnya</span>
                                         <span class="post-name">{{ $previous->judul ?? null }}</span>
                                     </a>
@@ -68,7 +68,7 @@
                             @endif
                             @if ($next != null)
                                 <div class="next-post">
-                                    <a href="{{ route('detail-berita', $next->id) }}">
+                                    <a href="{{ route('detail-berita', $next->slug) }}">
                                         <span class="post-control-link">Berita Selanjutnya</span>
                                         <span class="post-name">{{ $next->judul ?? null }}</span>
                                     </a>
@@ -99,7 +99,7 @@
                                         <div class="details">
                                             <span class="date">{{ $item->created_at->Format('D, d M Y') }} </span>
                                             <h4 class="fs-6"><a
-                                                    href="{{ route('detail-berita', $item->id) }}">{{ $item->judul }}</a>
+                                                    href="{{ route('detail-berita', $item->slug) }}">{{ $item->judul }}</a>
                                             </h4>
                                         </div>
                                     </div>
