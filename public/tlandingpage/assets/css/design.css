@@ -1,6 +1,6 @@
 html,
 body{
-	/*background: red;*/
+	/*background: #c20000;*/
 }
 /*.page-wrapper > .container{
 	background: #fff;
@@ -24,18 +24,18 @@ body{
 	top: 6px;
 	width: 8px;
 	height: 8px;
-	background: #4fc12f;
+	background: #c20000;
 	content: "";
 	border-radius: 50%;
 }
 .topbar ul li {
-    color: #4fc12f;
+    color: #c20000;
 }
 .topbar ul li.update span {
-    background: #4fc12f;
+    background: #c20000;
 }
 .topbar .contact-info ul li a:hover {
-    color: #4fc12f;
+    color: #c20000;
 }
 .blog-sidebar .widget {
     padding: 1.5rem!important;
@@ -56,7 +56,7 @@ body{
     z-index: 11;
 }
 .wpo-breadcumb-area {
-    background: url(../images/blog/bg-top2.jpeg) no-repeat center center/cover!important;
+    background: url(../images/blog/gedungmpp2.png) no-repeat center center/cover!important;
     min-height: 250px;
 }
 .blog-sidebar .recent-post-widget .post h4 {
@@ -113,7 +113,7 @@ body{
 }
 .blog-sidebar .wpo-contact-widget {
   border: 0;
-  background: #4fc12f;
+  background: #c20000;
   padding: 20px;
 }
 .wpo-blog-pg-section .wpo-blog-content .post {
@@ -161,5 +161,5 @@ body{
 }
 .wpo-accountInfo {
   width: 50%;
-  background: #4fc12f;
+  background: #c20000;
 }

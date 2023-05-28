@@ -81,8 +81,8 @@
                     <div class="wpo-blog-content" style="border-radius: 1rem; overflow: hidden;">
                         <div class="post format-video">
                             <div class="entry-media video-holder">
-                                <img src="https://prokopim.mahakamulukab.go.id/wp-content/uploads/2022/05/4-8.jpg" alt>
-                                <a href="{{ $getProfileWebsite->video }}" class="video-btn" data-type="iframe">
+                                <img src="https://images2.prokal.co/prokalco/files/berita/2023/02/10/2fbcbdf79c076afa541d7d7bdbd9ec43.jpg" alt>
+                                <a href="{{ $getProfileWebsite->video??null }}" class="video-btn" data-type="iframe">
                                     <i class="fi flaticon-play"></i>
                                 </a>
 
@@ -92,8 +92,8 @@
                 </div>
                 <div class="col col-lg-6 col-12">
                     <h5 class="fs-5 text-secondary">Selamat Datang di</h5>
-                    <h2 class="fw-bolder">DPMPTSP Mahakam Ulu</h2>
-                    <p>{{ $getProfileWebsite->deskripsi }}
+                    <h2 class="fw-bolder">DPMPTSP Kota Balikpapan</h2>
+                    <p>{{ $getProfileWebsite->deskripsi??null }}
                     </p>
                 </div>
             </div>
@@ -172,19 +172,18 @@
                             <h2>Jadwal Pelayanan</h2>
                         </div>
                         <div class="row">
-                            <div class="col-lg-7 col-12">
-                                <img src="{{asset($getProfileWebsite->gambar_pelayanan)}}" alt="" width="100%"
+                            <div class="col-lg col-12">
+                                <img src="{{asset($getProfileWebsite->gambar_pelayanan??null)}}" alt="" width="100%"
                                     height="300px" style="object-fit: cover; border-radius: 1rem; overflow: hidden;">
                             </div>
                             <div class="col-lg-5 col-12">
-                                {{-- <h5 class="fs-5 text-secondary">DPMPTSP Mahakam Ulu</h5>
-                                <h2 class="fw-bolder">DPMPTSP Mahakam Ulu</h2> --}}
-                                <h3 class="fw-bolder mb-3">{{$getProfileWebsite->slogan_pelayanan}}</h3>
-                                <p>{{$getProfileWebsite->deskripsi_pelayanan}}</p>
+                                <h5 class="fw-bolder">DPMPTSP Kota Balikpapan</h5>
+                                <h3 class="fw-bolder mb-3">{{$getProfileWebsite->slogan_pelayanan??null}}</h3>
+                                <p>{{$getProfileWebsite->deskripsi_pelayanan??null}}</p>
                                 <ul class="jadwal-pelayanan">
                                     <li>
                                         <h5 class="fw-bolder text-secondary">Senin - Kamis</h5>
-                                        <p>{{$getProfileWebsite->senin_kamis}}</p>
+                                        <p>{{$getProfileWebsite->senin_kamis??null}}</p>
                                     </li>
                                     <li>
                                         <h5 class="fw-bolder text-secondary">Jum'at</h5>
@@ -204,7 +203,7 @@
                                     style="object-fit: cover;">
                             </div>
                             <h4>{{ $getProfileWebsite->nama_kadis }}</h4>
-                            <p>Kepala Dinas DPMPTSP Mahakam Ulu</p>
+                            <p>Kepala Dinas DPMPTSP Balikpapan</p>
                             <div class="social">
                                 <ul class="clearfix">
                                     {{-- <li><a href="#"><i class="ti-facebook"></i></a></li>
