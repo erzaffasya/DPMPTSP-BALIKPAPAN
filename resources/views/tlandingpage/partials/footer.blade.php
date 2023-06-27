@@ -5,7 +5,7 @@
                 <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                     <div class="widget about-widget">
                         <div class="logo widget-title">
-                            <img src="{{asset($getProfileWebsite->logo)}}" alt="blog" height="85">
+                            <img src="{{asset("tlandingpage/assets/images/logo_panjang_putih.png")}}" alt="blog" height="85">
                         </div>
                         <h3 class="text-white fw-bold">{{$getProfileWebsite->slogan}}</h3 class="text-white fw-bold">
 
@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col col-xs-12">
-                    <p class="copyright"> Copyright &copy; 2022 DPMPTSP Mahakam Ulu</p>
+                    <p class="copyright"> Copyright &copy; 2023 DPMPTSP KOTA BALIKPAPAN</p>
                 </div>
             </div>
         </div>

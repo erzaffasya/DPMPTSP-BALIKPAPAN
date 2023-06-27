@@ -3,8 +3,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="{{asset("tlandingpage/assets/images/favicon.ico")}}">
-    <title>DPMPTSP - Kabupaten Mahakam Ulu</title>
+    <link rel="shortcut icon" type="image/png" href="https://seeklogo.com/images/P/pemkot-balikpapan-logo-1B75350134-seeklogo.com.png">
+    <title>DPMPTSP - KOTA BALIKPAPAN</title>
     <link href="{{asset("tlandingpage/assets/css/themify-icons.css")}}" rel="stylesheet">
     <link href="{{asset("tlandingpage/assets/css/flaticon.css")}}" rel="stylesheet">
     <link href="{{asset("tlandingpage/assets/css/bootstrap.min.css")}}" rel="stylesheet">
@@ -38,7 +38,7 @@
                         </div>
                         <div class="wpo-accountForm form-style">
                             <div class="text-center">
-                                <img src="{{asset("tlandingpage/assets/images/logo2.png")}}" alt="" width="250px">
+                                <img src="{{asset("tlandingpage/assets/images/logo_kecil.png")}}" height="70" alt="" >
                                 <br>
                                 <br>
                                 <div class="fromTitle">
