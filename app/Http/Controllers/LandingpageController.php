@@ -8,6 +8,7 @@ use App\Models\FastLink;
 use App\Models\HalamanMenu;
 use App\Models\Pelayanan;
 use App\Models\Pengumuman;
+use App\Models\Portal;
 use App\Models\ProfileWebsite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -32,6 +33,12 @@ class LandingpageController extends Controller
         $Pelayanan = Pelayanan::all();
         return view('tlandingpage.index', compact('Banner','ProfileWebsite','Pelayanan', 'Berita', 'Pengumuman', 'FastLink', 'RelatedPost', 'BeritaAtas', 'Populer'));
     }
+
+    public function portal(){
+        $Portal = Portal::orderBy('urut', 'DESC')->get();
+        return view('portal', compact('Portal'));
+    }
+
     public function HalamanMenu($id)
     {
 

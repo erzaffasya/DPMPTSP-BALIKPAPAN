@@ -64,6 +64,24 @@
         </a>
     </li>
 
+    <li class="menu-item {{ request()->routeIs('Portal.*') ? 'active open' : '' }}">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+            <div data-i18n="Misc">Portal</div>
+        </a>
+        <ul class="menu-sub ">
+            <li class="menu-item {{ request()->routeIs('Portal.create') ? 'active' : '' }}">
+                <a href="{{ route('Portal.create') }}" class="menu-link">
+                    <div data-i18n="Error">Tambah Data</div>
+                </a>
+            </li>
+            <li class="menu-item {{ request()->routeIs('Portal.index') ? 'active' : '' }}">
+                <a href="{{ route('Portal.index') }}" class="menu-link">
+                    <div data-i18n="Under Maintenance">Lihat Data</div>
+                </a>
+            </li>
+        </ul>
+    </li>
     {{-- Berita --}}
     <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Setting Berita</span>

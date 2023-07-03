@@ -12,6 +12,7 @@ use App\Http\Controllers\LinkTerkaitController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PelayananController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\PortalController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfileWebsiteController;
 use App\Http\Controllers\SurveyKepuasanController;
@@ -60,8 +61,8 @@ Route::get('berita', [LandingpageController::class, 'Berita'])->name('landingpag
 Route::get('detail-berita/{slug}', [LandingpageController::class, 'DetailBerita'])->name('detail-berita');
 Route::get('detail-pengumuman/{slug}', [LandingpageController::class, 'detailPengumuman'])->name('detail-pengumuman');
 Route::post('cari-berita', [LandingpageController::class, 'cariBerita'])->name('cari-berita');
-Route::get('/', [LandingpageController::class, 'home'])->name('home');
-
+Route::get('/home', [LandingpageController::class, 'home'])->name('home');
+Route::get('/', [LandingpageController::class, 'portal'])->name('portal');
 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -69,6 +70,7 @@ Route::group(['middleware' => 'auth'], function () {
     //     return view('admin.index');
     // });
 
+    Route::resource('Portal', PortalController::class);
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('setting-profile', [ProfileController::class, 'index'])->name('setting-profile');
     Route::put('ubah-password', [ProfileController::class, 'ubahPassword'])->name('ubah-password');
