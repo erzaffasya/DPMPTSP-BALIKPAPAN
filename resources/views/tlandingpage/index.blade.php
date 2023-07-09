@@ -10,7 +10,8 @@
                                 <div class="swiper-wrapper">
                                     @foreach ($Banner->where('isActive', true) as $Banners)
                                         <div class="swiper-slide">
-                                            <div class="slide-inner slide-bg-image" data-background="{{ asset($Banners->gambar) }}">
+                                            <div class="slide-inner slide-bg-image"
+                                                data-background="{{ asset($Banners->gambar) }}">
                                             </div>
                                         </div>
                                     @endforeach
@@ -80,8 +81,9 @@
                     <div class="wpo-blog-content" style="border-radius: 1rem; overflow: hidden;">
                         <div class="post format-video">
                             <div class="entry-media video-holder">
-                                <img src="https://images2.prokal.co/prokalco/files/berita/2023/02/10/2fbcbdf79c076afa541d7d7bdbd9ec43.jpg" alt>
-                                <a href="{{ $getProfileWebsite->video??null }}" class="video-btn" data-type="iframe">
+                                <img src="https://images2.prokal.co/prokalco/files/berita/2023/02/10/2fbcbdf79c076afa541d7d7bdbd9ec43.jpg"
+                                    alt>
+                                <a href="{{ $getProfileWebsite->video ?? null }}" class="video-btn" data-type="iframe">
                                     <i class="fi flaticon-play"></i>
                                 </a>
 
@@ -92,15 +94,14 @@
                 <div class="col col-lg-6 col-12">
                     <h5 class="fs-5 text-secondary">Selamat Datang di</h5>
                     <h2 class="fw-bolder">DPMPTSP Kota Balikpapan</h2>
-                    <p>{{ $getProfileWebsite->deskripsi??null }}
+                    <p>{{ $getProfileWebsite->deskripsi ?? null }}
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="modal fade" id="modallayanan" tabindex="-1" aria-labelledby="exampleModalLabel"x
-        aria-hidden="true">
+    <div class="modal fade" id="modallayanan" tabindex="-1" aria-labelledby="exampleModalLabel"x aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body">
@@ -113,46 +114,137 @@
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Dasar Hukum
-                                    </button>
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Dasar Hukum
+                                        </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the first item's accordion body.</strong> It is shown by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall appearance, as well
+                                            as the showing and hiding via CSS transitions. You can modify any of this
+                                            with custom CSS or overriding our default variables. It's also worth noting
+                                            that just about any HTML can go within the <code>.accordion-body</code>,
+                                            though the transition does limit overflow.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Persyaratan
-                                    </button>
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Persyaratan
+                                        </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the second item's accordion body.</strong> It is hidden by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall appearance, as well
+                                            as the showing and hiding via CSS transitions. You can modify any of this
+                                            with custom CSS or overriding our default variables. It's also worth noting
+                                            that just about any HTML can go within the <code>.accordion-body</code>,
+                                            though the transition does limit overflow.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Masa Berlaku
-                                    </button>
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Masa Berlaku
+                                        </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall appearance, as well
+                                            as the showing and hiding via CSS transitions. You can modify any of this
+                                            with custom CSS or overriding our default variables. It's also worth noting
+                                            that just about any HTML can go within the <code>.accordion-body</code>,
+                                            though the transition does limit overflow.
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Waktu Proses Penerbitan Izin
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall appearance, as well
+                                            as the showing and hiding via CSS transitions. You can modify any of this
+                                            with custom CSS or overriding our default variables. It's also worth noting
+                                            that just about any HTML can go within the <code>.accordion-body</code>,
+                                            though the transition does limit overflow.
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            Proses Penerbitan Izin
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall appearance, as well
+                                            as the showing and hiding via CSS transitions. You can modify any of this
+                                            with custom CSS or overriding our default variables. It's also worth noting
+                                            that just about any HTML can go within the <code>.accordion-body</code>,
+                                            though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                            aria-expanded="false" aria-controls="collapseSix">
+                                            Biaya / Retribusi
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall appearance, as well
+                                            as the showing and hiding via CSS transitions. You can modify any of this
+                                            with custom CSS or overriding our default variables. It's also worth noting
+                                            that just about any HTML can go within the <code>.accordion-body</code>,
+                                            though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer text-center">
-                    <button type="button" class="btn w-100 bg-white text-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn w-100 bg-white text-danger"
+                        data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -164,66 +256,90 @@
             <div class="wpo-section-title text-center mb-4">
                 <h2 class="text-warning mb-0 pb-0 fs-1">Layanan Perizinan DPMPTSP</h2>
                 <p class="text-white my-0 fs-5">Informasi Standar Pelayanan Perizinan 12 Teratas</p>
-                
+
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
@@ -246,7 +362,7 @@
                 <div class="col-4">
                     <form action="" method="post">
                         @csrf
-                        @method("POST")
+                        @method('POST')
                         <div>
                             <input type="text" name="berita" class="form-control" placeholder="Search here...">
                         </div>
@@ -255,62 +371,86 @@
                 <div class="col-12 mb-4">
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
-                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                    <button type="button"
+                        class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan"
+                        data-toggle="modal" data-target="#modallayanan">
                         Izin Praktik Dokter
                     </button>
                 </div>
@@ -321,7 +461,7 @@
 
     <section class="wpo-blog-highlights-section section-padding">
         <div class="container">
-            
+
             <div class="row">
                 <div class="col col-lg-9 col-12">
                     <div class="mb-5">
@@ -370,21 +510,22 @@
                         </div>
                         <div class="row">
                             <div class="col-lg col-12">
-                                <img src="{{asset($getProfileWebsite->gambar_pelayanan??null)}}" alt="" width="100%"
-                                    height="300px" style="object-fit: cover; border-radius: 1rem; overflow: hidden;">
+                                <img src="{{ asset($getProfileWebsite->gambar_pelayanan ?? null) }}" alt=""
+                                    width="100%" height="300px"
+                                    style="object-fit: cover; border-radius: 1rem; overflow: hidden;">
                             </div>
                             <div class="col-lg-5 col-12">
                                 <h5 class="fw-bolder">DPMPTSP Kota Balikpapan</h5>
-                                <h3 class="fw-bolder mb-3">{{$getProfileWebsite->slogan_pelayanan??null}}</h3>
-                                <p>{{$getProfileWebsite->deskripsi_pelayanan??null}}</p>
+                                <h3 class="fw-bolder mb-3">{{ $getProfileWebsite->slogan_pelayanan ?? null }}</h3>
+                                <p>{{ $getProfileWebsite->deskripsi_pelayanan ?? null }}</p>
                                 <ul class="jadwal-pelayanan">
                                     <li>
                                         <h5 class="fw-bolder text-secondary">Senin - Kamis</h5>
-                                        <p>{{$getProfileWebsite->senin_kamis??null}}</p>
+                                        <p>{{ $getProfileWebsite->senin_kamis ?? null }}</p>
                                     </li>
                                     <li>
                                         <h5 class="fw-bolder text-secondary">Jum'at</h5>
-                                        <p>{{$getProfileWebsite->jumat}}</p>
+                                        <p>{{ $getProfileWebsite->jumat }}</p>
                                     </li>
                                 </ul>
                             </div>
@@ -432,9 +573,8 @@
                         </div>
                         @foreach ($FastLink as $item)
                             <div class="wpo-add-widget mb-4">
-                                <a href="{{$item->link}}"><img
-                                        src="{{asset($item->logo)}}"
-                                        alt="" width="100%" height="100%"></a>
+                                <a href="{{ $item->link }}"><img src="{{ asset($item->logo) }}" alt=""
+                                        width="100%" height="100%"></a>
                             </div>
                         @endforeach
                         <div class="wpo-contact-widget widget">

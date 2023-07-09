@@ -12,6 +12,8 @@ use App\Http\Controllers\LinkTerkaitController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PelayananController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\PerizinanController;
+use App\Http\Controllers\PerizinanDetailController;
 use App\Http\Controllers\PortalController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfileWebsiteController;
@@ -87,6 +89,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('FastLink', FastLinkController::class);
     Route::resource('Banner', BannerController::class);
     Route::resource('ProfileWebsites', ProfileWebsiteController::class);
+
+    Route::resource('Perizinan', PerizinanController::class);
+    Route::resource('PerizinanDetail', PerizinanDetailController::class);
+    Route::get('setting-detail/{id}', [PerizinanController::class, 'settingDetail'])->name('settingDetail');
 
     Route::prefix('ProfileWebsite')->group(function () {
         Route::get('kepala-dinas', [ProfileWebsiteController::class, 'kepalaDinas'])->name('kepalaDinas');

@@ -200,6 +200,27 @@
     </a>
 </li> --}}
 
+<li class="menu-header small text-uppercase">
+    <span class="menu-header-text">Setting Perizinan</span>
+</li>
+<li class="menu-item {{ request()->routeIs('Perizinan.*') ? 'active open' : '' }}">
+    <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-dock-top"></i>
+        <div data-i18n="Account Settings">Perizinan</div>
+    </a>
+    <ul class="menu-sub">
+        <li class="menu-item {{ request()->routeIs('Perizinan.create') ? 'active' : '' }}">
+            <a href="{{ route('Perizinan.create') }}" class="menu-link ">
+                <div data-i18n="Account">Tambah Data</div>
+            </a>
+        </li>
+        <li class="menu-item {{ request()->routeIs('Perizinan.index') ? 'active' : '' }}">
+            <a href="{{ route('Perizinan.index') }}" class="menu-link ">
+                <div data-i18n="Account">Lihat Data</div>
+            </a>
+        </li>
+    </ul>
+</li>
 <!-- Misc -->
 <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
 {{-- Pengumuman --}}
@@ -210,14 +231,12 @@
     </a>
     <ul class="menu-sub">
         <li class="menu-item {{ request()->routeIs('Pengumuman.create') ? 'active' : '' }}">
-            <a href="{{ route('Pengumuman.create') }}"
-                class="menu-link ">
+            <a href="{{ route('Pengumuman.create') }}" class="menu-link ">
                 <div data-i18n="Account">Tambah Data</div>
             </a>
         </li>
         <li class="menu-item {{ request()->routeIs('Pengumuman.index') ? 'active' : '' }}">
-            <a href="{{ route('Pengumuman.index') }}"
-                class="menu-link ">
+            <a href="{{ route('Pengumuman.index') }}" class="menu-link ">
                 <div data-i18n="Account">Lihat Data</div>
             </a>
         </li>
@@ -288,14 +307,12 @@
     </a>
     <ul class="menu-sub">
         <li class="menu-item  {{ request()->routeIs('Banner.create') ? 'active' : '' }}">
-            <a href="{{ route('Banner.create') }}"
-                class="menu-link">
+            <a href="{{ route('Banner.create') }}" class="menu-link">
                 <div data-i18n="Account">Tambah Data</div>
             </a>
         </li>
         <li class="menu-item {{ request()->routeIs('Banner.index') ? 'active' : '' }}">
-            <a href="{{ route('Banner.index') }}"
-                class="menu-link ">
+            <a href="{{ route('Banner.index') }}" class="menu-link ">
                 <div data-i18n="Account">Lihat Data</div>
             </a>
         </li>
@@ -316,32 +333,27 @@
     </a>
     <ul class="menu-sub">
         <li class="menu-item  {{ request()->routeIs('kepalaDinas') ? 'active' : '' }}">
-            <a href="{{ route('kepalaDinas') }}"
-                class="menu-link">
+            <a href="{{ route('kepalaDinas') }}" class="menu-link">
                 <div data-i18n="Account">Kepala Dinas</div>
             </a>
         </li>
         <li class="menu-item {{ request()->routeIs('profilWebsite') ? 'active' : '' }}">
-            <a href="{{ route('profilWebsite') }}"
-                class="menu-link ">
+            <a href="{{ route('profilWebsite') }}" class="menu-link ">
                 <div data-i18n="Account">Profile DPMPTSP</div>
             </a>
         </li>
         <li class="menu-item {{ request()->routeIs('kontaks') ? 'active' : '' }}">
-            <a href="{{ route('kontaks') }}"
-                class="menu-link ">
+            <a href="{{ route('kontaks') }}" class="menu-link ">
                 <div data-i18n="Account">Kontak</div>
             </a>
         </li>
         <li class="menu-item {{ request()->routeIs('sosialMedia') ? 'active' : '' }}">
-            <a href="{{ route('sosialMedia') }}"
-                class="menu-link ">
+            <a href="{{ route('sosialMedia') }}" class="menu-link ">
                 <div data-i18n="Account">Sosial Media</div>
             </a>
         </li>
         <li class="menu-item {{ request()->routeIs('jadwalPelayanan') ? 'active' : '' }}">
-            <a href="{{ route('jadwalPelayanan') }}"
-                class="menu-link ">
+            <a href="{{ route('jadwalPelayanan') }}" class="menu-link ">
                 <div data-i18n="Account">Jadwal Pelayanan</div>
             </a>
         </li>
