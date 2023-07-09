@@ -281,6 +281,26 @@
         });
     }
 
+    $(document).ready(function () {
+        $('.btn-layanan').click(function () {
+            $('#modallayanan').modal('show');
+        });
+
+        $('.close, .btn-secondary').click(function () {
+            $('#modallayanan').modal('hide');
+        });
+    });
+    $(document).on('click', '.accordion-button', function () {
+        var target = $(this).data('bs-target');
+        var $targetCollapse = $(target);
+
+        if ($targetCollapse.hasClass('show')) {
+            $targetCollapse.collapse('hide');
+        } else {
+            $('.collapse.show').collapse('hide');
+            $targetCollapse.collapse('show');
+        }
+    });
 
     /*------------------------------------------
         = ACTIVE GALLERY POPUP IMAGE

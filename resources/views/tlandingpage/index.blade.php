@@ -10,8 +10,7 @@
                                 <div class="swiper-wrapper">
                                     @foreach ($Banner->where('isActive', true) as $Banners)
                                         <div class="swiper-slide">
-                                            <div class="slide-inner slide-bg-image"
-                                                data-background="{{ asset($Banners->gambar) }}">
+                                            <div class="slide-inner slide-bg-image" data-background="{{ asset($Banners->gambar) }}">
                                             </div>
                                         </div>
                                     @endforeach
@@ -100,31 +99,229 @@
         </div>
     </section>
 
-    <div class="wpo-breacking-news section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="b-title"><span>Pelayanan Kami</span></div>
-                <div class="wpo-breacking-wrap owl-carousel">
-                    @foreach ($Pelayanan as $item)
-                        <div class="wpo-breacking-item s1">
-                            <div class="wpo-breacking-img">
-                                <img src="{{ asset($item->gambar) }}" alt="">
-                            </div>
-                            <div class="wpo-breacking-text">
-                                <h3 class="fw-bolder">{{ $item->judul }}</h3>
-                                <p>{!! $item->deskripsi !!}</a>
-                                </p>
-                            </div>
+    <div class="modal fade" id="modallayanan" tabindex="-1" aria-labelledby="exampleModalLabel"x
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="section-title text-center mb-0 pb-2">
+                        <p class="text-danger text-uppercase fw-bold mb-0 fs-6">Layanan Perizinan</p>
+                        <h4 class="fs-2">Izin Membuat Bangunan</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Dasar Hukum
+                                    </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Persyaratan
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Masa Berlaku
+                                    </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
                         </div>
-                    @endforeach
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn w-100 bg-white text-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <div class="wpo-breacking-news section-padding bg-reds bg-img-overlay item1-img py-4">
+        <div class="container">
+            <div class="wpo-section-title text-center mb-4">
+                <h2 class="text-warning mb-0 pb-0 fs-1">Layanan Perizinan DPMPTSP</h2>
+                <p class="text-white my-0 fs-5">Informasi Standar Pelayanan Perizinan 12 Teratas</p>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-warning fw-bold text-dark shadow-lg">
+                    <span>Lihat Semua Perizinan</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    {{-- ONE PAGE --}}
+    <div class="wpo-breacking-news section-padding">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="text-danger mb-0 pb-0 fw-bold fs-1">Layanan Perizinan DPMPTSP</h2>
+                <p class="text-dark my-0 fs-5">Informasi Standar Pelayanan Perizinan</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <form action="" method="post">
+                        @csrf
+                        @method("POST")
+                        <div>
+                            <input type="text" name="berita" class="form-control" placeholder="Search here...">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 mb-4">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-10 mb-4">
+                    <button type="button" class="btn btn-light border w-100 h-100 fw-bold text-dark shadow-lg py-3 btn-layanan" data-toggle="modal" data-target="#modallayanan">
+                        Izin Praktik Dokter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <section class="wpo-blog-highlights-section section-padding">
         <div class="container">
-
+            
             <div class="row">
                 <div class="col col-lg-9 col-12">
                     <div class="mb-5">
