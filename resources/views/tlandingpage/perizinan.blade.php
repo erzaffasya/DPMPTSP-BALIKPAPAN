@@ -23,7 +23,7 @@
                                         <div id="collapseOne" class="accordion-collapse collapse show"
                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                {!! $item['data']['dasar_hukum'] !!}
+                                                {!! $item['data']['dasar_hukum']??"Tidak ada data"  !!}
                                             </div>
                                         </div>
                                     </div>
@@ -38,7 +38,7 @@
                                         <div id="collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                {!! $item['data']['persyaratan'] !!}
+                                                {!! $item['data']['persyaratan']??"Tidak ada data"  !!}
                                             </div>
                                         </div>
                                     </div>
@@ -53,7 +53,7 @@
                                         <div id="collapseThree" class="accordion-collapse collapse"
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                {!! $item['data']['masa_berlaku'] !!}
+                                                {!! $item['data']['masa_berlaku']??"Tidak ada data"  !!}
                                             </div>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@
                                         <div id="collapseFour" class="accordion-collapse collapse"
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                {!! $item['data']['waktu_proses'] !!}
+                                                {!! $item['data']['waktu_proses']??"Tidak ada data"  !!}
                                             </div>
                                         </div>
                                     </div>
@@ -83,7 +83,7 @@
                                         <div id="collapseFive" class="accordion-collapse collapse"
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                {!! $item['data']['proses_penerbitan'] !!}
+                                                {!! $item['data']['proses_penerbitan']??"Tidak ada data"  !!}
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@
                                         <div id="collapseSix" class="accordion-collapse collapse"
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                {!! $item['data']['biaya_retribusi'] !!}
+                                                {!! $item['data']['biaya_retribusi']??"Tidak ada data"  !!}
                                             </div>
                                         </div>
                                     </div>

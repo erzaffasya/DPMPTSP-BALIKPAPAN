@@ -36,13 +36,17 @@ class LandingpageController extends Controller
         $Perizinan = Perizinan::orderBy('urut', 'ASC')->limit(12)->get();
 
         foreach ($Perizinan as $item) {
+            $dataDetail = PerizinanDetail::where('perizinan_id', $item->id)->first();
+            if ($dataDetail != null){
+                $dataDetail->toArray();
+            }
             $dataPerizinan[] = [
                 'id' => $item->id,
                 'perizinan' => $item->perizinan,
                 'deskripsi' => $item->deskripsi,
                 'isActive' => $item->isActive,
                 'urut' => $item->urut,
-                'data' => PerizinanDetail::where('perizinan_id', $item->id)->first()->toArray()
+                'data' => $dataDetail
             ];
         }
         // dd($dataPerizinan);
@@ -58,13 +62,14 @@ class LandingpageController extends Controller
     public function perizinan(){
         $Perizinan = Perizinan::orderBy('urut', 'ASC')->get();
         foreach ($Perizinan as $item) {
+            $dataDetail = PerizinanDetail::where('perizinan_id', $item->id)->first();
             $dataPerizinan[] = [
                 'id' => $item->id,
                 'perizinan' => $item->perizinan,
                 'deskripsi' => $item->deskripsi,
                 'isActive' => $item->isActive,
                 'urut' => $item->urut,
-                'data' => PerizinanDetail::where('perizinan_id', $item->id)->first()->toArray()
+                'data' => $dataDetail
             ];
         }
         return view('tlandingpage.perizinan', compact('Perizinan', 'dataPerizinan'));

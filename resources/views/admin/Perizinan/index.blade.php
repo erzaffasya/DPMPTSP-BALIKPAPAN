@@ -19,8 +19,8 @@
                             <td> {{ $loop->iteration }} </td>
                             <td> {{ $item->perizinan }} </td>
                             <td> {!! $item->deskripsi !!} </td>
-                            <td> {{ $item->isActive }} </td>
                             <td> {{ $item->urut }} </td>
+                            <td> {{ $item->isActive }} </td>
 
                             <td>
                                 <div class="dropdown">
