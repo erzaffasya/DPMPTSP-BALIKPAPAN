@@ -8,6 +8,8 @@ use App\Models\FastLink;
 use App\Models\HalamanMenu;
 use App\Models\Pelayanan;
 use App\Models\Pengumuman;
+use App\Models\Perizinan;
+use App\Models\PerizinanDetail;
 use App\Models\Portal;
 use App\Models\ProfileWebsite;
 use Illuminate\Http\Request;
@@ -31,13 +33,43 @@ class LandingpageController extends Controller
         $RelatedPost = Berita::with(['User', 'kategoriBerita'])->inRandomOrder()->limit(4)->get();
         $ProfileWebsite = ProfileWebsite::find(1);
         $Pelayanan = Pelayanan::all();
-        return view('tlandingpage.index', compact('Banner','ProfileWebsite','Pelayanan', 'Berita', 'Pengumuman', 'FastLink', 'RelatedPost', 'BeritaAtas', 'Populer'));
+        $Perizinan = Perizinan::orderBy('urut', 'ASC')->limit(12)->get();
+
+        foreach ($Perizinan as $item) {
+            $dataPerizinan[] = [
+                'id' => $item->id,
+                'perizinan' => $item->perizinan,
+                'deskripsi' => $item->deskripsi,
+                'isActive' => $item->isActive,
+                'urut' => $item->urut,
+                'data' => PerizinanDetail::where('perizinan_id', $item->id)->first()->toArray()
+            ];
+        }
+        // dd($dataPerizinan);
+        return view('tlandingpage.index', compact('dataPerizinan','Perizinan','Banner','ProfileWebsite','Pelayanan', 'Berita', 'Pengumuman', 'FastLink', 'RelatedPost', 'BeritaAtas', 'Populer'));
     }
 
     public function portal(){
-        $Portal = Portal::orderBy('urut', 'DESC')->get();
+        $Portal = Portal::orderBy('urut', 'ASC')->get();
         return view('portal', compact('Portal'));
     }
+
+
+    public function perizinan(){
+        $Perizinan = Perizinan::orderBy('urut', 'ASC')->get();
+        foreach ($Perizinan as $item) {
+            $dataPerizinan[] = [
+                'id' => $item->id,
+                'perizinan' => $item->perizinan,
+                'deskripsi' => $item->deskripsi,
+                'isActive' => $item->isActive,
+                'urut' => $item->urut,
+                'data' => PerizinanDetail::where('perizinan_id', $item->id)->first()->toArray()
+            ];
+        }
+        return view('tlandingpage.perizinan', compact('Perizinan', 'dataPerizinan'));
+    }
+
 
     public function HalamanMenu($id)
     {

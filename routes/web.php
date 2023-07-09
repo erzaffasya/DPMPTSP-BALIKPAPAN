@@ -58,6 +58,7 @@ Route::get('/login2', function () {
 
 //HalamanMenu
 Route::get('detail/{id}', [LandingpageController::class, 'HalamanMenu'])->name('HalamanMenu');
+Route::get('data-perizinan', [LandingpageController::class, 'perizinan'])->name('perizinan');
 Route::get('sub-menu/{id}', [MenuController::class, 'subMenu'])->name('sub-menu');
 Route::get('berita', [LandingpageController::class, 'Berita'])->name('landingpage-berita');
 Route::get('detail-berita/{slug}', [LandingpageController::class, 'DetailBerita'])->name('detail-berita');
