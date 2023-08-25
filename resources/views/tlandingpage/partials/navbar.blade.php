@@ -52,6 +52,7 @@
                                     <x-menu-item :menu="$item" />                            
                                 @endforeach
                                 <li><a href="{{route('landingpage-berita')}}">Berita</a></li>
+                                <li><a href="{{route('perizinan')}}">Perizinan</a></li>
                                 <li><a href="{{route('kontak')}}">Kontak</a></li>
                             </ul>
                         </div>
