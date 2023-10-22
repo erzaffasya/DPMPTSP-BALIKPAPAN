@@ -101,6 +101,7 @@ class PerizinanDetailController extends Controller
     public function update(Request $request, $id)
     {
         $PerizinanDetail = PerizinanDetail::findOrNew($id);
+        $PerizinanDetail->id = $id;
         $PerizinanDetail->dasar_hukum = $request->dasar_hukum;
         $PerizinanDetail->persyaratan = $request->persyaratan;
         $PerizinanDetail->masa_berlaku = $request->masa_berlaku;

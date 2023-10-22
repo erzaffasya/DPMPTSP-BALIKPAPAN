@@ -1,4 +1,7 @@
 <x-guest-layout>
+    @if ($HalamanMenu->id == 22)
+        <meta http-equiv="refresh" content="0; url=http://ppid.balikpapan.go.id/ppid/permohonan">
+    @endif
     <section class="wpo-blog-single-section mt-4 mb-5">
         <div class="container">
             <div class="row">
@@ -6,7 +9,8 @@
                     <h2 class="fw-bolder mb-3">{{ $HalamanMenu->judul ?? null }}</h2>
                     <p>
                         @if ($HalamanMenu->gambar ?? null)
-                            <img src="{{ asset($HalamanMenu->gambar) }}" width="100%" style="object-fit: contain; object-position: top;">
+                            <img src="{{ asset($HalamanMenu->gambar) }}" width="100%"
+                                style="object-fit: contain; object-position: top;">
                         @endif
                         @if ($HalamanMenu->isi ?? null)
                             {!! $HalamanMenu->isi !!}
@@ -15,9 +19,9 @@
                             <iframe height="800" src="{{ asset($HalamanMenu->file) }}" width="100%"></iframe>
                         @endif
                         @if ($HalamanMenu->link ?? null)
-                        <br>
-                        {{-- <h3>Link</h3> --}}
-                        Link : <a href="{{$HalamanMenu->link}}">Klik Disini!!</a>
+                            <br>
+                            {{-- <h3>Link</h3> --}}
+                            Link : <a href="{{ $HalamanMenu->link }}">Klik Disini!!</a>
                         @endif
                     </p>
                 </div>
