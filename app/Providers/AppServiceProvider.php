@@ -29,7 +29,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('Menu', Menu::tree()->get()->toTree());
+        // View::share('Menu', Menu::tree()->get()->toTree());
+        View::share('Menu',Menu::all());
         Paginator::useBootstrapFive();
         View::share('getProfileWebsite', ProfileWebsite::find(1));
         View::share('getLinkTerkait', LinkTerkait::all());

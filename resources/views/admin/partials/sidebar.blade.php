@@ -80,6 +80,11 @@
                     <div data-i18n="Under Maintenance">Lihat Data</div>
                 </a>
             </li>
+            <li class="menu-item {{ request()->routeIs('BannerPortal.index') ? 'active' : '' }}">
+                <a href="{{ route('BannerPortal.index') }}" class="menu-link">
+                    <div data-i18n="Under Maintenance">Banner</div>
+                </a>
+            </li>
         </ul>
     </li>
     {{-- Berita --}}

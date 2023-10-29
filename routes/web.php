@@ -2,6 +2,7 @@
 
 use App\Helpers\Helper;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\BannerPortalController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FastLinkController;
@@ -84,6 +85,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('Berita', BeritaController::class);
     Route::resource('SurveyKepuasan', SurveyKepuasanController::class);
     Route::resource('Menu', MenuController::class);
+    Route::resource('BannerPortal', BannerPortalController::class);
 
     //Blom
     Route::resource('Pengumuman', PengumumanController::class);

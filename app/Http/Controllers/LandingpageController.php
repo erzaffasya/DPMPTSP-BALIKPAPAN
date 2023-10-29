@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\BannerPortal;
 use App\Models\Berita;
 use App\Models\FastLink;
 use App\Models\HalamanMenu;
@@ -55,7 +56,9 @@ class LandingpageController extends Controller
 
     public function portal(){
         $Portal = Portal::orderBy('urut', 'ASC')->get();
-        return view('portal', compact('Portal'));
+
+        $BannerPortal = BannerPortal::where('isActive', true)->first();
+        return view('portal', compact('Portal', 'BannerPortal'));
     }
 
 
